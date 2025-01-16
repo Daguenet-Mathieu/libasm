@@ -1,0 +1,2 @@
+nasm -f elf64 -o program.o ft_putstr.asm
+ld -s -o program program.o -lc -dynamic-linker /lib64/ld-linux-x86-64.so.2
