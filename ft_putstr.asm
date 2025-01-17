@@ -39,9 +39,13 @@ ft_putstr:
     ret
 
 ft_put:
+    call strlen
+    mov rdx, rax
+    mov byte [rsi + rdx], 10
+    inc rdx
     mov rax, 1
     mov rdi, 1
-    call strlen
-    mov byte [rdi + rax], 10
     syscall
+    mov byte [rsi + rdx - 1], 0
     ret
+
