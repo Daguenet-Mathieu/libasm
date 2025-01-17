@@ -26,6 +26,7 @@ error:
     mov rsi, msg
     mov rdx, 22
     call ft_putstr
+    jmp exit
 
 exit:
     mov rax, 60
